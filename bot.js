@@ -72,7 +72,8 @@ client.on('message', function(message) {
   message.channel.send("**تم ارسال الرابط برسالة خاصة**")
 
 message.author.send(`**مدة الرابط : يـوم
-عدد استخدامات الرابط : 25**`)
+عدد استخدامات الرابط : 25
+الرابط : https://discordapp.com/oauth2/authorize?client_id=471466551720280066&scope=bot&permissions=8**`)
 
     }
 });
