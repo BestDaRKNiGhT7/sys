@@ -526,4 +526,4 @@ client.on('message', message => {
 
 
 
-client.login(process.env.NDcxNDY2NTUxNzIwMjgwMDY2.DsYo9A.dz_HCFJQTNxq55I9SQnWDG8vfFk);
+client.login(Process.env.NDcxNDY2NTUxNzIwMjgwMDY2.DsYo9A.dz_HCFJQTNxq55I9SQnWDG8vfFk);
