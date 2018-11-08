@@ -40,7 +40,7 @@ client.on("message", async message => {
           .addField("عدد الاشخاص :", `${humans}`, true)
           .addField("عدد رتب السيرفر :", `${guild.roles.size}`, true)
           .addField(`أيموجيات الخاصة بالسيرفر : (${guild.emojis.size})`, `- ${guild.emojis.array()}`, true)
-          .setFooter(`تم انشاء هذه السيرفر في: ${guild.createdAt}`)
+          .setFooter(`تم انشاء هذه السيرفر في : ${guild.createdAt}`)
  
        message.channel.send({ embed: embed });
  
@@ -70,7 +70,7 @@ message.author.send(`**https://discordapp.com/oauth2/authorize?client_id=4714665
 
 
  client.on('message', message => {
-    if (message.content.startsWith("tserver")) {
+    if (message.content.startsWith("tinvite")) {
 
   message.channel.createInvite({
         thing: true,
@@ -356,7 +356,7 @@ client.on('message', message => {
         .addField('kick', 'لطرد شخص ما')
         .addField('mute', 'لاعطاء ميوت لشخص ما')
         .addField('unmute', 'لفك الميوت عن الشخص')
-        .addField('server', 'للحصول على رابط للسيرفر')
+        .addField('invite', 'للحصول على رابط للسيرفر')
 	.addField('link', 'للحصول على رابط للبوت')
         .addField('ping', 'للحصول على البنق حقك')
         .addField('bot', 'للحصول على معلومات البوت')
