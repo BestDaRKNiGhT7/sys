@@ -67,7 +67,7 @@ client.on('message', function(message) {
         maxUses: 25,
         maxAge: 86400
     }).then(invite =>
-      message.author.sendMessage(invite.url)
+      message.author.sendMessage("invite.url")
     )
   message.channel.send("**تم ارسال الرابط برسالة خاصة**")
 
