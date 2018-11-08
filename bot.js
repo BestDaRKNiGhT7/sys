@@ -62,12 +62,22 @@ client.on('message', function(message) {
   client.on('message', message => {
     if (message.content.startsWith("tlink")) {
 
+message.author.send(`**https://discordapp.com/oauth2/authorize?client_id=471466551720280066&scope=bot&permissions=8**`)
+
+    }
+});
+
+
+
+ client.on('message', message => {
+    if (message.content.startsWith("tserver")) {
+
   message.channel.createInvite({
         thing: true,
         maxUses: 25,
         maxAge: 86400
     }).then(invite =>
-      message.author.sendMessage("invite.url")
+      message.author.sendMessage(invite.url)
     )
   message.channel.send("**تم ارسال الرابط برسالة خاصة**")
 
@@ -76,6 +86,9 @@ message.author.send(`**مدة الرابط : يـوم
 
     }
 });
+
+
+
 
 
 client.on('message', message => {
@@ -347,7 +360,8 @@ client.on('message', message => {
         .addField('kick', 'لطرد شخص ما')
         .addField('mute', 'لاعطاء ميوت لشخص ما')
         .addField('unmute', 'لفك الميوت عن الشخص')
-        .addField('link', 'للحصول على رابط للسيرفر')
+        .addField('server', 'للحصول على رابط للسيرفر')
+	.addField('link', 'للحصول على رابط للبوت')
         .addField('ping', 'للحصول على البنق حقك')
         .addField('bot', 'للحصول على معلومات البوت')
         .addField('dr', 'لحذف الروم لي تكتب بيه الامر')
