@@ -162,12 +162,12 @@ const prefix = "t";
   
   if (message.mentions.users.size < 1) return message.reply("**منشن شخص**");
   if (!message.guild.member(user)
-  .bannable) return message.reply("**يجب ان تكون رتبة البوت اعلي من رتبه الشخص المراد تبنيدة**");
+  .bannable) return message.reply("**يجب ان تكون رتبة البوت اعلي من رتبه الشخص المراد تبنيده**");
 
 
   message.guild.member(user).ban(7, user);
 
-message.channel.send(`**baneed from this server**`)
+message.channel.send(`:airplane: | **${user.username} has been banned**`)
 
 }
 });
