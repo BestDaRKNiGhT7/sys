@@ -1,0 +1,13 @@
+{
+  "name": "sys",
+  "version": "2.1.0",
+  "description": "-- AWESOMENESS --",
+  "main": "bot.js",
+  "scripts": {
+    "start": "node bot.js"
+  },
+  "dependencies": {
+    "discord.js": "^11.3.2",
+    "request": "^2.85.0",
+  }
+}
