@@ -8,7 +8,7 @@ client.on('ready', () => {
       console.log(`ON ${client.guilds.size} Servers '     Script By : Tops ' `);
     console.log(`----------------`);
   console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(`Tops | thelp`,"http://twitch.tv/Death Shop")
+client.user.setGame(`Tops | thelp`)
 client.user.setStatus("online")
 });
 
