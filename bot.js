@@ -311,28 +311,6 @@ client.on('message', msg => {
 });
 
 
-client.on('message', message => {
-    if (message.content === 'thelp') {
-        let helpEmbed = new Discord.RichEmbed()
-        .setTitle('**...أوامر البوت**')
-        .setDescription('**برفكس البوت (t)**')
-        .addField('ban', '**لتبنيد شخص ما**')
-        .addField('kick', '**لطرد شخص ما**')
-        .addField('mute', '**لاعطاء ميوت لشخص ما**')
-        .addField('unmute', '**لفك الميوت عن الشخص**')
-        .addField('ping', '**للحصول على البنق حقك**')
-	.addField('giveaway', '**لعمل قيف اواي**')
-        .addField('bot', '**للحصول على معلومات البوت**')
-        .addField('dr', '**لحذف الروم لي تكتب بيه الامر**')
-        .addField('mc', '**لغلق الشات**')
-        .addField('umc', '**لفتح الشات**')
-        .addField('tnew', '**لفتح تذكرة في حالة حدوث مشكلة**')
-        .addField('bc', '**رسالة لجميع الاعضاء**')
-        .setFooter('شكرا لاستخدامكم البوت')
-        .setColor('#40e0d0')
-      message.channel.send(helpEmbed);
-    }
-});
 
 
 client.on('message', function(message) {
