@@ -339,6 +339,7 @@ client.on('message', message => {
         .addField('unmute', '**لفك الميوت عن الشخص**')
 	.addField('link', '**للحصول على رابط للبوت**')
         .addField('ping', '**للحصول على البنق حقك**')
+	.addField('giveaway', '**لعمل قيف اواي**')
         .addField('bot', '**للحصول على معلومات البوت**')
         .addField('dr', '**لحذف الروم لي تكتب بيه الامر**')
         .addField('mc', '**لغلق الشات**')
