@@ -48,14 +48,7 @@ client.on("message", async message => {
     });
 
 
-	
-  client.on('message', message => {
-    if (message.content.startsWith("tlink")) {
 
-message.replay(`**https://discordapp.com/oauth2/authorize?client_id=471466551720280066&scope=bot&permissions=8**`)
-
-    }
-});
 
 
 client.on('message', message => {
