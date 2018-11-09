@@ -330,8 +330,6 @@ client.on('message', message => {
         .addField('ping', '**للحصول على البنق حقك**')
 	.addField('giveaway', '**لعمل قيف اواي**')
         .addField('bot', '**للحصول على معلومات البوت**')
-	.addField('clear', '**لمسح الشات**')
-	.addField('info', '**للحصول علي معلومات الشخص**')
         .addField('dr', '**لحذف الروم لي تكتب بيه الامر**')
         .addField('mc', '**لغلق الشات**')
         .addField('umc', '**لفتح الشات**')
