@@ -1,5 +1,7 @@
 const Discord = require('discord.js');  
 const db = require('quick.db');  
+client.user.setGame(`Tops | thelp`)
+client.user.setStatus("online")
 const hastebin = require('hastebin-gen');  
 const client = new Discord.Client();    
 const Canvas = require('canvas');        
