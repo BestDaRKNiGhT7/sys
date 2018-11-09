@@ -340,6 +340,7 @@ client.on('message', message => {
         .addField('ping', '**للحصول على البنق حقك**')
 	.addField('giveaway', '**لعمل قيف اواي**')
         .addField('bot', '**للحصول على معلومات البوت**')
+	.addField('clear', '**لمسح الشات**')
         .addField('dr', '**لحذف الروم لي تكتب بيه الامر**')
         .addField('mc', '**لغلق الشات**')
         .addField('umc', '**لفتح الشات**')
@@ -557,7 +558,25 @@ message.channel.sendEmbed(embed);
 
 
 
+            var args = message.content.substring(prefix.length).split(" ");
+            if (message.content.startsWith(prefix + "clear")) {
+   if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('⚠ | **لا يوجد لديك صلاحية لمسح الشات**');
+        var msg;
+        msg = parseInt();
+      
+      message.channel.fetchMessages({limit: msg}).then(messages => message.channel.bulkDelete(messages)).catch(console.error);
+      message.channel.sendMessage("", {embed: {
+        title: "Done | تــم مسح الشات",
+        color: 0x06DF00,
+        description: "تم مسح الرسائل ",
+        footer: {
+          text: "©KBOOSHDev"
+        }
+      }}).then(msg => {msg.delete(30)});
+                          }
 
+     
+});
 
 
 
