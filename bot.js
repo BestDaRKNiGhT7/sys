@@ -29,26 +29,24 @@ client.on('message', message => {
 if (message.content.startsWith(prefix + 'help')) {
     let pages = [
 	`=-=-=-=-=-= 🌍 Public Commands - اوامر عامة 🌍 =-=-=-=-=-=
-     ✴ -sug =====> To Suggest | لعمل اقتراح
+    ✴ -sug =====> To Suggest | لعمل اقتراح
     ✴ -id ======> To Show Your ID | ايدي حسابك
-    ✴ -ping ====> Ping Of Bot | بنج حك البوت
-    ✴ -allbots => Show All Bots In The Server | لاضهار جميع البوتات
+    ✴ -ping ====> Ping Of Bot | بنق حق البوت
+    ✴ -allbots => Show All Bots In The Server | لاظهار جميع البوتات
     ✴ -bot =====> Information Of The Bot | معلومات البوت
     ✴ -server ==> Information Of The Server | معلومات السيرفر
     ✴ -count ===> Member Count | عدد الاشخاص في السيرفر
     ✴ -cal =====> To Calculate | اله لحاسبة 
     ✴ -tag =====> To Tag A Word | لعمل تاق لكلمة 
-    ✴ -rooms ===> Show Rooms Of Server | اضهار الرومات الي في السيرفر
+    ✴ -rooms ===> Show Rooms Of Server | اظهار رومات السيرفر
     ✴ -za5 =====> To decorate Some Word | لزخرفة الكلمات
-    ✴ -roles ===> Show Roles Of The Server | اضهار الرانكات
+    ✴ -roles ===> Show Roles Of The Server | اظهار الرانكات
     ✴ -emojis ==> Emoji Of Server | ايموجيات السيرفر   
-    ✴ -say =====> The Bot Say Any Thing | تكرار اي شي كتبتو
-    ✴ -image ===> To Show Image Of Server | لاضهار صورة السيرف 
-    ✴ -contact => To Contact Owners Bot | مراسلة صاحب البوت
-    ✴ -invite \ -inv => Invite Bot | لدعوة البوت
+    ✴ -say =====> The Bot Say Any Thing | تكرار اي شي كتبته
+    ✴ -image ===> To Show Image Of Server | لاظهار صورة السيرفر 
+    ✴ -invite ==> To Invite Bot | لدعوة البوت
     ✴ -embed ===> To Embed | لتكرار اي شي كتبتو بطريقة حلوة
     ✴ -avatar ==> Your Avatar | صورتك الشخصية
-    ✴ -support => Server Support | سيرفر الدعم الفني
      ===========================================================
       React With ▶ To See Admins Commands`,
 	`=-=-=-=-=-= 🔧  Admin Commands - اوامر ادارية 🔧 =-=-=-=-=-=
@@ -62,17 +60,17 @@ if (message.content.startsWith(prefix + 'help')) {
     ❖ -role bots <rank> => Give Bots Rank | لأعطاء رتبة لجميع البوتات
     ❖ -hchannel => Hide Channel | اخفاء الشات
     ❖ -schannel => Show The Hidden Channel | اضهار الشات المخفية
-    ❖ -clr <numbr> => Clear Chat With Number | مسح الشات بعدد
+    ❖ -clr <number> => Clear Chat With Number | مسح الشات بعدد
     ❖ -clear => Clear Chat | مسح الشات
     ❖ -mute @user <reason> => Mute User | اعطاء العضو ميوت لازم رتبة <Muted>
     ❖ -unmute @user => Unmute User | لفك الميوت عن الشخص 
     ❖ -kick @user <reason> => Kick User From Server | طرد الشخص من السيرفر
-    ❖ -ban @user <reason> => Ban User From Server | حضر الشخص من السيرفر
+    ❖ -ban @user <reason> => Ban User From Server | حظر الشخص من السيرفر
     ❖ -mutechannel => Mute Channel | تقفيل الشات
     ❖ -unmutechannel => Unmute Channel | فتح الشات
     ❖ -dc => Delete All Rooms |  مسح كل الرومات
     ❖ -dr => Delete All Rank <مسح كل الرانكات <لازم تكون رانك البوت فوق كل الرانكات
-    ❖ -ccolors <number> => Create Colors | ينشا لك الوان مع كم الوان تبي
+    ❖ -ccolors <number> => Create Colors | ينشأ لك الوان مع كم الوان تبي
     ❖ -kv @user => Voice Kick | يطرد شخص من الرووم
     ❖ -vonline => Create Channel Voice Online | يسوي رووم فويس اونلاين
      ===========================================================
@@ -89,7 +87,7 @@ if (message.content.startsWith(prefix + 'help')) {
     💠 -لعبة فكك <= فكك
     💠 -لعبة عواصم <= عواصم
     💠 -البوت يعطيك نصائح <= هل تعلم
-      قريييب نضيف بعض الالعاب واذا تبون اي لعبة تعالو سيرفر المساعدة
+                            قريييب نضيف العاب ثانية
     ===========================================================
       React With ▶ To See Music Commands`,
 	`=-=-=-=-=-= 🎯  Music Commands - اوامر الموسيقى 🎯 =-=-=-=-=-=
@@ -417,9 +415,9 @@ client.on('guildDelete', guild => {
          const embed = new Discord.RichEmbed()
      .setColor("GOLD")
      .setTitle('Click Here To Add Bot .!')
-     .setURL('https://discordapp.com/oauth2/authorize?client_id=400489866573512705&permissions=8&scope=bot')
+     .setURL('https://discordapp.com/oauth2/authorize?client_id=471466551720280066&scope=bot&permissions=8')
   .setDescription(`**
-   Server kicked Speed Bot :cry:
+   Server kicked Tops Bot :cry:
 Server name: __${guild.name}__
 Server owner: __${guild.owner}__
 Server id: __${guild.id}__ 
@@ -538,7 +536,7 @@ ${serverQueue.songs.map(song => `**${++index} -** ${song.title}`).join('\n')}
 			serverQueue.connection.dispatcher.pause();
 			return msg.channel.send('تم إيقاف الموسيقى مؤقتا!');
 		}
-		return msg.channel.send('لا يوجد شيء حالي ف العمل.');
+		return msg.channel.send('لا يوجد شيء حالي في العمل.');
 	} else if (command === "resume") {
 		if (serverQueue && !serverQueue.playing) {
 			serverQueue.playing = true;
@@ -1469,7 +1467,7 @@ if (!message.content.startsWith(prefix)) return;
 ${user} You Are Muted Because You Broke Rules 
 ${message.author.tag} By
 [ ${reason} ] : Reason
-If You Didnt Any Thing GGO To Staff
+**If You Didn't Do Any Thing GO To Staff**
 `)
 		.setFooter(`Server : ${message.guild.name}`)
 		.setColor("RANDOM")
@@ -1487,7 +1485,7 @@ if(!message.guild.member(client.user).hasPermission("MANAGE_MESSAGES")) return m
   if(!role || !toMute.roles.has(role.id)) return message.channel.sendMessage(":x: This User In Not Muted")
 
   await toMute.removeRole(role)
-  message.channel.sendMessage(":white_check_mark: Succes Has Been Unmuted The User");
+  message.channel.sendMessage(":white_check_mark: [user.tag] Has Been Successfuly UnMuted");
 
   return;
 
@@ -1570,7 +1568,7 @@ var fkk =[
            } else {
 
                                var embedx = new Discord.RichEmbed()
-             .setTitle(':x:خطاء')
+             .setTitle('❌خطأ')
              .setAuthor(message.author.username, message.author.avatarURL)
              .setColor("RANDOM")
              .setDescription(`**${result.author.username}** الإجابة خاطئة`);
@@ -1677,7 +1675,7 @@ var aoasm =[
            } else {
 
                                   var embedx = new Discord.RichEmbed()
-                .setTitle(':x:خطاء')
+                .setTitle('❌خطأ')
                 .setAuthor(message.author.username, message.author.avatarURL)
                 .setColor("RANDOM")
                 .setDescription(`**${result.author.username}** الإجابة خاطئة`);
@@ -1843,7 +1841,7 @@ client.on('message', message => {
   if (message.mentions.users.size < 1) return message.reply("**Mention SomeOne**");
   if(!reason) return message.reply ("**Write A Reason**");
   if (!message.guild.member(user)
-  .kickable) return message.reply("**I Cant Kick SomeOne High Than My Rank**");
+  .kickable) return message.reply("**I Cant Kick SomeOne Higher Than My Rank**");
 
   message.guild.member(user).kick();
 
@@ -1914,25 +1912,15 @@ client.on('message', message => {
 });
 
 
-client.on('message', message => {
-        if (message.content === "-invite") {
-            if(!message.channel.guild) return;
-        let embed = new Discord.RichEmbed()
-        .setAuthor(` ${message.author.username} `, message.author.avatarURL)      
-        .setTitle(`➡ Click Here `)
-        .setURL(`https://discordapp.com/oauth2/authorize?client_id=400489866573512705&permissions=8&scope=bot`)
-        .setThumbnail(" https://cdn.discordapp.com/avatars/377904849783750667/6c76e412f18c142dfd711d05fb363869.png?size=2048")        
-     message.channel.sendEmbed(embed);
-       }
-   });
+
    
    client.on('message', message => {
-        if (message.content === "-inv") {
+        if (message.content === "-invinte") {
             if(!message.channel.guild) return;
         let embed = new Discord.RichEmbed()
         .setAuthor(` ${message.author.username} `, message.author.avatarURL)      
         .setTitle(`➡ Click Here `)
-        .setURL(`https://discordapp.com/oauth2/authorize?client_id=400489866573512705&permissions=8&scope=bot`)
+        .setURL(`https://discordapp.com/oauth2/authorize?client_id=510183313755865100&scope=bot&permissions=8`)
         .setThumbnail(" https://cdn.discordapp.com/avatars/377904849783750667/6c76e412f18c142dfd711d05fb363869.png?size=2048")        
      message.channel.sendEmbed(embed);
        }
@@ -1976,17 +1964,7 @@ client.on('message', message => {
 });
 
 
-   client.on('message', message => {
-     if (message.content === "-support") {
-     let embed = new Discord.RichEmbed()
-  .setAuthor(message.author.username)
-  .setColor("#9B59B6")
-  .addField(" ** :gear: Server Support :gear: **" , "  **https://discord.gg/htNpU3J**")
-     
-     
-  message.channel.sendEmbed(embed);
-    }
-});
+   
 client.on('message', omar => {
 var prefix = "-";
 if(omar.content.split(' ')[0] == prefix + 'dc') {  // delete all channels
@@ -2012,7 +1990,7 @@ client.on('message', message => {
 	var prefix = "-";
    if(!message.channel.guild) return;
 if(message.content.startsWith(prefix + 'clear')) {
-if(!message.channel.guild) return message.channel.send('**This Command is Just For Servers**').then(m => m.delete(5000));
+if(!message.channel.guild) return message.channel.send('**This Command is Only For Servers**').then(m => m.delete(5000));
 if(!message.member.hasPermission('MANAGE_MESSAGES')) return      message.channel.send('**You Do not have permission** `MANAGE_MESSAGES`' );
 let args = message.content.split(" ").join(" ").slice(2 + prefix.length);
 let request = `Requested By ${message.author.username}`;
