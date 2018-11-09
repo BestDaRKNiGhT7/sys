@@ -1,8 +1,7 @@
-const Discord = require('discord.js');  
+const Discord = require("discord.js");
+const client = new Discord.Client();
 const db = require('quick.db');  
-client.user.setGame(`Tops | -help`)
-const hastebin = require('hastebin-gen');  
-const client = new Discord.Client();    
+const hastebin = require('hastebin-gen');     
 const Canvas = require('canvas');        
 const fs = require("fs"); 
 const getYoutubeID = require('get-youtube-id'); 
@@ -24,6 +23,17 @@ const sql = require("sqlite");
  const pretty = require('pretty-ms') 
 ,ti={}  
 ,spee={}; 
+
+client.on('ready', () => {
+   console.log(`----------------`);
+      console.log(`Desert Bot- Script By : Tops`);
+        console.log(`----------------`);
+      console.log(`ON ${client.guilds.size} Servers '     Script By : Tops ' `);
+    console.log(`----------------`);
+  console.log(`Logged in as ${client.user.tag}!`);
+client.user.setGame(`Tops | thelp`)
+client.user.setStatus("online")
+}); 
 
 client.on('message', message => {
  var prefix = "-";
