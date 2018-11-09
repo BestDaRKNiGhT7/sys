@@ -3,13 +3,13 @@ const client = new Discord.Client();
 var prefix = "t";
 client.on('ready', () => {
    console.log(`----------------`);
-      console.log(`Desert Bot- Script By : EX Clan`);
+      console.log(`Desert Bot- Script By : Tops`);
         console.log(`----------------`);
-      console.log(`ON ${client.guilds.size} Servers '     Script By : EX Clan ' `);
+      console.log(`ON ${client.guilds.size} Servers '     Script By : Tops ' `);
     console.log(`----------------`);
   console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(`Tops | thelp`,"http://twitch.tv/Death Shop")
-client.user.setStatus("dnd")
+client.user.setGame(`Tops | thelp`)
+client.user.setStatus("online")
 });
 
 client.on("message", async message => {
@@ -40,42 +40,15 @@ client.on("message", async message => {
           .addField("عدد الاشخاص :", `${humans}`, true)
           .addField("عدد رتب السيرفر :", `${guild.roles.size}`, true)
           .addField(`أيموجيات الخاصة بالسيرفر : (${guild.emojis.size})`, `- ${guild.emojis.array()}`, true)
-          .setFooter(`تم انشاء هذه السيرفر في: ${guild.createdAt}`)
+          .setFooter(`تم انشاء هذه السيرفر في : ${guild.createdAt}`)
  
        message.channel.send({ embed: embed });
  
       }
     });
 
-client.on('message', function(message) {
-    if (message.content == "tclear") {
-        if (message.member.hasPermission("MANAGE_MESSAGES")) {
-            message.channel.fetchMessages()
-               .then(function(list){
-                    message.channel.bulkDelete(list);
-                }, function(err){message.channel.send("ERROR: ERROR CLEARING CHANNEL.")})
-        }
-    }
 
-});
-	
-  client.on('message', message => {
-    if (message.content.startsWith("tlink")) {
 
-  message.channel.createInvite({
-        thing: true,
-        maxUses: 25,
-        maxAge: 86400
-    }).then(invite =>
-      message.author.sendMessage(invite.url)
-    )
-  message.channel.send("**تم ارسال الرابط برسالة خاصة**")
-
-message.author.send(`**مدة الرابط : يـوم
-عدد استخدامات الرابط : 25**`)
-
-    }
-});
 
 
 client.on('message', message => {
@@ -88,7 +61,7 @@ if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply(' لي
          SEND_MESSAGES: false
 
            }).then(() => {
-               message.reply("تم تقفيل الشات ? ")
+               message.reply("تم تقفيل الشات  ")
            });
              }
 if (message.content === "tumc") {
@@ -99,7 +72,7 @@ if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('لي�
          SEND_MESSAGES: true
 
            }).then(() => {
-               message.reply("تم فتح الشات?")
+               message.reply("تم فتح الشات")
            });
              }
 
@@ -161,12 +134,12 @@ const prefix = "t";
   
   if (message.mentions.users.size < 1) return message.reply("**منشن شخص**");
   if (!message.guild.member(user)
-  .bannable) return message.reply("**يجب ان تكون رتبة البوت اعلي من رتبه الشخص المراد تبنيدة**");
+  .bannable) return message.reply("**يجب ان تكون رتبة البوت اعلي من رتبه الشخص المراد تبنيده**");
 
 
   message.guild.member(user).ban(7, user);
 
-message.channel.send(`**baneed from this server**`)
+message.channel.send(`:airplane: | **${user.username} has been banned**`)
 
 }
 });
@@ -338,28 +311,6 @@ client.on('message', msg => {
 });
 
 
-client.on('message', message => {
-    if (message.content === 'thelp') {
-        let helpEmbed = new Discord.RichEmbed()
-        .setTitle('**أوامر البوت...**')
-        .setDescription('**برفكس البوت (!)**')
-        .addField('ban', 'لتبنيد شخص ما')
-        .addField('kick', 'لطرد شخص ما')
-        .addField('mute', 'لاعطاء ميوت لشخص ما')
-        .addField('unmute', 'لفك الميوت عن الشخص')
-        .addField('link', 'للحصول على رابط للسيرفر')
-        .addField('ping', 'للحصول على البنق حقك')
-        .addField('bot', 'للحصول على معلومات البوت')
-        .addField('dr', 'لحذف الروم لي تكتب بيه الامر')
-        .addField('mc', 'لغلق الشات')
-        .addField('umc', 'لفتح الشات')
-        .addField('tnew', 'لفتح تذكرة في حالة حدوث مشكلة')
-        .addField('bc', 'رسالة لجميع الاعضاء')
-        .setFooter('شكرا لاستخدامكم البوت')
-        .setColor('#40e0d0')
-      message.channel.send(helpEmbed);
-    }
-});
 
 
 client.on('message', function(message) {
@@ -395,7 +346,33 @@ client.on('message', function(message) {
   }  
  });
  
- 
+
+
+client.on('message', message => {
+    if (message.content === 'thelp') {
+        let helpEmbed = new Discord.RichEmbed()
+        .setTitle('**...أوامر البوت**')
+        .setDescription('**برفكس البوت (t)**')
+        .addField('ban', '**لتبنيد شخص ما**')
+        .addField('kick', '**لطرد شخص ما**')
+        .addField('mute', '**لاعطاء ميوت لشخص ما**')
+        .addField('unmute', '**لفك الميوت عن الشخص**')
+        .addField('ping', '**للحصول على البنق حقك**')
+	.addField('giveaway', '**لعمل قيف اواي**')
+        .addField('bot', '**للحصول على معلومات البوت**')
+        .addField('dr', '**لحذف الروم لي تكتب بيه الامر**')
+        .addField('mc', '**لغلق الشات**')
+        .addField('umc', '**لفتح الشات**')
+        .addField('tnew', '**لفتح تذكرة في حالة حدوث مشكلة**')
+        .addField('bc', '**رسالة لجميع الاعضاء**')
+        .setFooter('شكرا لاستخدامكم البوت')
+        .setColor('#40e0d0')
+      message.channel.send(helpEmbed);
+    }
+});
+
+
+
 
 client.on("message", (message) => {
     /// DREAM
@@ -459,6 +436,75 @@ client.on("message", (message) => {
 
 
 
+client.on('message',async message => {
+ 				 var room;
+  var title;
+  var duration;
+  var gMembers;
+  var filter = m => m.author.id === message.author.id;
+  if(message.content.startsWith(prefix + "giveaway")) {
+     //return message.channel.send(':heavy_multiplication_x:| **هذا الامر معطل حاليا.. ``حاول في وقت لاحق``**');
+    if(!message.guild.member(message.author).hasPermission('MANAGE_GUILD')) return message.channel.send(':heavy_multiplication_x:| **يجب أن يكون لديك خاصية التعديل على السيرفر**');
+    message.channel.send(`:eight_pointed_black_star:| **اكتب اسم الروم الذي تريد به القيف اواي**`).then(msg => {
+      message.channel.awaitMessages(filter, {
+        max: 1,
+        time: 20000,
+        errors: ['time']
+      }).then(collected => {
+        let room = message.guild.channels.find('name', collected.first().content);
+        if(!room) return message.channel.send(':heavy_multiplication_x:| **لم اقدر على ايجاد الروم المطلوب**');
+        room = collected.first().content;
+        collected.first().delete();
+        msg.edit(':eight_pointed_black_star:| **اكتب مدة القيف اواي**').then(msg => {
+          message.channel.awaitMessages(filter, {
+            max: 1,
+            time: 20000,
+            errors: ['time']
+          }).then(collected => {
+            if(isNaN(collected.first().content)) return message.channel.send(':heavy_multiplication_x:| **يجب عليك ان تحدد وقت زمني صحيح.. ``يجب عليك اعادة كتابة الامر``**');
+            duration = collected.first().content * 60000;
+            collected.first().delete();
+            msg.edit(':eight_pointed_black_star:| **واخيرا اكتب على ماذا تريد القيف اواي**').then(msg => {
+              message.channel.awaitMessages(filter, {
+                max: 1,
+                time: 20000,
+                errors: ['time']
+              }).then(collected => {
+                title = collected.first().content;
+                collected.first().delete();
+                try {
+                  let giveEmbed = new Discord.RichEmbed()
+                  .setAuthor(message.guild.name, message.guild.iconURL)
+                  .setTitle(title)
+                  .setDescription(`المدة : ${duration / 60000} دقائق`)
+                  .setFooter(message.author.username, message.author.avatarURL);
+                  message.guild.channels.find('name', room).send(giveEmbed).then(m => {
+                     let re = m.react('✨');
+                     setTimeout(() => {
+                       let users = m.reactions.get("✨").users;
+                       let list = users.array().filter(u => u.id !== m.author.id);
+                       let gFilter = list[Math.floor(Math.random() * list.length) + 0]
+                       let endEmbed = new Discord.RichEmbed()
+                       .setAuthor(message.author.username, message.author.avatarURL)
+                       .setTitle(title)
+                       .addField('انتهى القيف اواي !',`الفائز هو : ${gFilter}`)
+                       .setFooter(message.guild.name, message.guild.iconURL);
+                       m.edit(endEmbed);
+                     },duration);
+                   });
+                  msg.edit(`:heavy_check_mark:| **تم اعداد القيف اواي**`);
+                } catch(e) {
+                  msg.edit(`:heavy_multiplication_x:| **لم اقدر على اعداد القيف اواي بسبب نقص الخصائص**`);
+                  console.log(e);
+                }
+              });
+            });
+          });
+        });
+      });
+    });
+  }
+});
 
 
 
@@ -494,11 +540,6 @@ client.on('message', message => {
 message.channel.sendEmbed(embed);
    }
 });
-
-
-
-
-
 
 
 
