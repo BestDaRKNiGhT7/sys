@@ -341,6 +341,7 @@ client.on('message', message => {
 	.addField('giveaway', '**لعمل قيف اواي**')
         .addField('bot', '**للحصول على معلومات البوت**')
 	.addField('clear', '**لمسح الشات**')
+	.addField('info', '**للحصول علي معلومات الشخص**')
         .addField('dr', '**لحذف الروم لي تكتب بيه الامر**')
         .addField('mc', '**لغلق الشات**')
         .addField('umc', '**لفتح الشات**')
@@ -446,6 +447,20 @@ client.on("message", (message) => {
 
 
 
+client.on('message', message => {
+   if (message.content === "tinfo") {
+   let embed = new Discord.RichEmbed()
+  .setColor("RANDOM")
+  .setThumbnail(message.author.avatarURL)
+  .addField("Name:",`${message.author.username}`, true)
+  .addField('Discrim:',"#" +  message.author.discriminator, true)
+  .addField("ID:", message.author.id, true)
+  .addField("Create At:", message.author.createdAt, true)
+     
+     
+  message.channel.sendEmbed(embed);
+    }
+});
 
 
 
