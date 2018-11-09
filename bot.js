@@ -47,17 +47,7 @@ client.on("message", async message => {
       }
     });
 
-client.on('message', function(message) {
-    if (message.content == "tclear") {
-        if (message.member.hasPermission("MANAGE_MESSAGES")) {
-            message.channel.fetchMessages()
-               .then(function(list){
-                    message.channel.bulkDelete(list);
-                }, function(err){message.channel.send("ERROR: ERROR CLEARING CHANNEL.")})
-        }
-    }
 
-});
 	
   client.on('message', message => {
     if (message.content.startsWith("tlink")) {
