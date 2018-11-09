@@ -1,5 +1,4 @@
 const Discord = require('discord.js');  
-const hastebin = require('hastebin-gen');  
 const client = new Discord.Client();    
 const Canvas = require('canvas');        
 const fs = require("fs"); 
