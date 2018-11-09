@@ -1,5 +1,6 @@
 const Discord = require('discord.js');  
 const client = new Discord.Client();   
+const stripIndents = require('common-tags').stripIndents
 const { Client, Util } = require('discord.js');  
 client.on('message', message => {
  var prefix = "-";
