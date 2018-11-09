@@ -337,7 +337,6 @@ client.on('message', message => {
         .addField('kick', '**لطرد شخص ما**')
         .addField('mute', '**لاعطاء ميوت لشخص ما**')
         .addField('unmute', '**لفك الميوت عن الشخص**')
-	.addField('link', '**للحصول على رابط للبوت**')
         .addField('ping', '**للحصول على البنق حقك**')
 	.addField('giveaway', '**لعمل قيف اواي**')
         .addField('bot', '**للحصول على معلومات البوت**')
