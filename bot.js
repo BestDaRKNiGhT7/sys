@@ -586,7 +586,7 @@ kboosh.on("messageCreate", (msg) => {
     }
 });
 
-kboosh.connect("NDcxNDY2NTUxNzIwMjgwMDY2.DsclLA.Ei9j8uYv1RQGseabeHN5zIKR7yE")
+
 
 
 
