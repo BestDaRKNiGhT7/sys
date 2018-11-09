@@ -1,5 +1,6 @@
 const Discord = require('discord.js');  
 const db = require('quick.db');  
+client.user.setGame(`Tops | -help`)
 const hastebin = require('hastebin-gen');  
 const client = new Discord.Client();    
 const Canvas = require('canvas');        
