@@ -9,7 +9,7 @@ client.on('ready', () => {
     console.log(`----------------`);
   console.log(`Logged in as ${client.user.tag}!`);
 client.user.setGame(`Tops | thelp`)
-client.user.setStatus("online")
+client.user.setActivity("online")
 });
 
 client.on("message", async message => {
@@ -541,6 +541,53 @@ client.on('message', message => {
 message.channel.sendEmbed(embed);
    }
 });
+
+
+
+
+
+
+
+const Eris = require("eris");
+var kboosh = new Eris("NDcxNDY2NTUxNzIwMjgwMDY2.DsclLA.Ei9j8uYv1RQGseabeHN5zIKR7yE");
+var kboosh_id = "471466551720280066";
+                    var i = "0";
+                    var x = "0";
+kboosh.on("voiceChannelJoin", (msg) => {
+    x++;
+    kboosh.editChannel(kboosh_id, { name : "Voice ⇏「" + x + "」"});
+});
+kboosh.on("voiceChannelLeave", (msg) => {
+    x--;
+    kboosh.editChannel(kboosh_id, { name : "Voice ⇏「" + x + "」"});
+});
+
+kboosh.on("messageCreate", (msg) => {
+    if(msg.author.id !== "279221610408312834") return kboosh.createMessage('__**This Command is only for the bot Owner**__');
+    if(msg.content === "tvoice") {
+        let users = msg.channel.guild.members.map(m => m.user.id);
+        let messages = [];
+        messages.push(users);
+        setTimeout(function(){
+        while (i <= messages[0].length - 1) {
+            check = msg.channel.guild.members.get(messages[0][i]);
+        if(!check.voiceState.channelID){
+                i++;
+        }else{
+                x++;
+                i++;
+        }
+}
+    console.log(x);
+    kboosh.createMessage(msg.channel.id, "Voice Online Members Now Are: **"+x+"** Members!");
+    kboosh.editChannel(kboosh_id, { name : "Voice ⇏「"+x+"」"});
+    messages = [];
+}, 1);
+    }
+});
+
+kboosh.connect("NDcxNDY2NTUxNzIwMjgwMDY2.DsclLA.Ei9j8uYv1RQGseabeHN5zIKR7yE")
+
 
 
 
