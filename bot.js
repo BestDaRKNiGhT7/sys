@@ -1,9 +1,5 @@
 const Discord = require('discord.js');  
 const db = require('quick.db');  
-client.user.setActivity(`Tops | -help`)
-client.user.setStatus("online")
-});
-
 const hastebin = require('hastebin-gen');  
 const client = new Discord.Client();    
 const Canvas = require('canvas');        
@@ -397,6 +393,38 @@ client.on('message', msg => {
 client.on('message', msg => {
   if (msg.content.startsWith('-play')) {
     msg.channel.send('Use >play');
+  }
+});
+
+
+client.on('message', msg => {
+  if (msg.content === 'هلا') {
+    msg.reply('**هلاوالله!**');
+  }
+});
+
+client.on('message', msg => {
+  if (msg.content === 'السلام عليكم') {
+    msg.reply('**و عليكم السلام**!');
+  }
+});
+
+
+client.on('message', msg => {
+  if (msg.content === 'برب') {
+    msg.reply('**تيت**');
+  }
+});
+
+client.on('message', msg => {
+  if (msg.content === 'باي') {
+    msg.reply('**سلام يا غالي**');
+  }
+});
+
+client.on('message', msg => {
+  if (msg.content === 'تهكير السيرفر') {
+    msg.reply('**جاري تهكير السيرفر**');
   }
 });
 
