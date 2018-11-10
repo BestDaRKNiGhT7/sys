@@ -85,9 +85,6 @@ if (message.content.startsWith(prefix + 'help')) {
     ❖ -kv @user => Voice Kick | يطرد شخص من الرووم
     ❖ -vonline => Create Channel Voice Online | يسوي رووم فويس اونلاين
      ===========================================================
-     ✴ Create Channel **welcome** To Enable The Welcome 
-     ✴ Create Channel **suggestion** To Enable Command -sug
-     ===========================================================
       React With ▶ To See Games Commands`,
 	`=-=-=-=-=-= 🎯  Games Commands - اوامر الالعاب 🎯 =-=-=-=-=-=
     💠 -xo @user => Game XO | لعب اكس او
