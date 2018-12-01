@@ -346,7 +346,7 @@ j = 1;
             j = -1;	
       }	
        i = i+j;	
-        client.user.setGame(setGame[SlayersServer],`https://m.twitch.tv/twitchpresents`);	
+        
 }, ms);	
 	
 });
