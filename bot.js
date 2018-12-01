@@ -335,7 +335,7 @@ coll.first().delete()
 client.on('ready', function(){
   client.user.setStatus("dnd");
     var ms = 40000 ;	
-    var setGame = ['!inv','!help'];	
+    var setGame = ['SlayersServer','https://m.twitch.tv/twitchpresents'];	
     var i = -1;	
     var j = 0;	
     setInterval(function (){	
@@ -346,7 +346,7 @@ j = 1;
             j = -1;	
       }	
        i = i+j;	
-        client.user.setGame(setGame[i],`http://www.youtube.com/gg`);	
+        client.user.setGame(setGame[SlayersServer],`https://m.twitch.tv/twitchpresents`);	
 }, ms);	
 	
 });
@@ -451,7 +451,7 @@ client.on('message', message => {
     if (message.content.startsWith("رابط")) {
         message.channel.createInvite({
         thing: true,
-        maxUses: 1,
+        maxUses: 10,
         maxAge: 3600,
     }).then(invite =>
       message.author.sendMessage(invite.url)
@@ -467,7 +467,7 @@ client.on('message', message => {
               const Embed11 = new Discord.RichEmbed()
         .setColor("RANDOM")
         
-    .setDescription(" مدة الرابط : ساعه  عدد استخدامات الرابط : 1 ")
+    .setDescription(" مدة الرابط : ساعه  عدد استخدامات الرابط : 10 ")
       message.author.sendEmbed(Embed11)
     }
 });
@@ -504,7 +504,7 @@ if (message.content.startsWith(prefix + 'help')) { /// This is The DMS Code Send
 『!emojilist/يعرض لك كل الايموجيات الي بالسيرفر』
 『say/يكرر الكلام الي تكتبو』
 『!image/صورة السيرفر』
-『!members/��عرض لك عدد كل حالات الاشخاص وعدد البوتات وعدد الاشخاص』
+『!members/عرض لك عدد كل حالات الاشخاص وعدد البوتات وعدد الاشخاص』
 『!id/معلومات عنك』
 『!profile/عرض بروفايل حقك』
 『!tc/انشاء روم مؤقت ويمكنك تحديد الاعدادات』
@@ -514,16 +514,13 @@ if (message.content.startsWith(prefix + 'help')) { /// This is The DMS Code Send
 『!embed/يكرر الي تقولو بشكل حلو』
 『!discrim/كود يضهر لك الاشخاص نفس تاقك』
 『!emoji <any things>/لتحويل اي كلمه تقولها الي ايموجي』
-『!inv/لدعوة البوت الى سيرفرك』
-『!support/سيرفر الدعم』
-『!contact/ارسال اقتراح او لمراسلة صاحب البوت』
 **
   `
 ,`
         ***__Administrative Orders__***
-**
+
 『!move @user /  لسحب الشخص الى روومك』
-『!voiceonline /  لتفعيل خاصيه فويس اونلاين يسحب عدد الاشخاص موجودين برومات』
+『!voiceonline /  لتفعيل خاصيه فويس اونلاين』
 『!bc / رسالة جماعية الى كل اعضاء السيرفر』
 『!bcrole / لارسال رساله جماعي لرتبه محدده يجب تمنشنها 』
 『!role @user <rank> / لأعطاء رتبة لعضو معين』
@@ -533,7 +530,7 @@ if (message.content.startsWith(prefix + 'help')) { /// This is The DMS Code Send
 『!role bots <rank> / لأعطاء رتبة لجميع البوتات』
 『!hchannel / اخفاء الشات』
 『!schannel / اضهار الشات المخفية』
-『!clr <numbr> / مسح الشات بعدد』
+『!clr <number> / مسح الشات بعدد』
 『!clear / مسح الشات』
 『!mute @user <reason> / اعطاء العضو ميوت لازم رتبة <Muted>』
 『!unmute @user / لفك الميوت عن الشخص 』
@@ -546,10 +543,10 @@ if (message.content.startsWith(prefix + 'help')) { /// This is The DMS Code Send
 『!ct <name> / انشاء شات』
 『!cv <name> / انشاء رووم فويس』
 『!delet <name> / مسح الشات او الرووم فويس』
-『❖!ccolors <number> / ينشا لك الوان مع كم الوان تبي』
+『!ccolors <number> / ينشا لك الوان مع كم الوان تبي』
    `,`
         ***__Music orders__***
-**
+
 『${prefix}play / لتشغيل أغنية برآبط أو بأسم』
 『${prefix}skip / لتجآوز الأغنية الحآلية』
 『${prefix}pause / إيقآف الأغنية مؤقتا』
@@ -558,24 +555,24 @@ if (message.content.startsWith(prefix + 'help')) { /// This is The DMS Code Send
 『${prefix}stop / لإخرآج البوت من الروم』
 『${prefix}np / لمعرفة الأغنية المشغلة حآليا』
 『${prefix}queue / لمعرفة قآئمة التشغيل』
-**
+
         ***__Games orders__***
- **       
+       
 『!rps / حجر ورقة مقص』
 『!speed / اسرع كتابة』
 『!quas / اسئلة عامة』
-『!نكت / نكت 』
-『!لعبة فكك / فكك』
-『!عواصم عشوائي/عواصم』
-『!لعبة كت تويت / كت تويت』
-『!roll <number> / قرعة』
-『!لو خيروك بطريقة حلوة / لو خيروك』
-『!لعبة مريم / مريم』
-『!فوائد ونصائح  / هل تعلم』
-『!يعطيك عقابات قاسية / عقاب 』
+『نكت / نكت! 』
+『لعبة فكك / فكك!』
+『عواصم عشوائي/عواصم!』
+『لعبة كت تويت / كت تويت!』
+『roll <number> / قرعة!』
+『لو خيروك بطريقة حلوة / لو خيروك!』
+『لعبة مريم / مريم!』
+『فوائد ونصائح  / هل تعلم!』
+『يعطيك عقابات قاسية / عقاب! 』
 
 
-**
+
    
 `]
     let page = 1;
@@ -857,7 +854,7 @@ client.user.setAvatar(argresult);
   message.channel.sendMessage(`**${argresult}** : تم تغير صورة البوت`);
       } else     
 if (message.content.startsWith(adminprefix + 'setT')) {
-  client.user.setGame(argresult, "https://www.twitch.tv/idk");
+  client.user.setGame(argresult, "https://m.twitch.tv/twitchpresents");
     message.channel.sendMessage(`**تم تغيير تويتش البوت إلى  ${argresult}**`)
 }
 });
