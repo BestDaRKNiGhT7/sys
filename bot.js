@@ -33,7 +33,7 @@ const sql = require("sqlite");
 
  
 client.on('message',async message => {
-    if(message.content.startsWith("perfix" + "javas")) {
+    if(message.content.startsWith(perfix + "javas")) {
   if(!message.channel.guild) return message.reply('This Command For Servers Only !');
     let jscodes = message.guild.channels.find(`name`, "✵-「discord_js");
     if(!jscodes) return message.channel.send(":x:لم اجد الروم الخاص بنشر الاكواد");
