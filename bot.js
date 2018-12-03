@@ -32,7 +32,6 @@ const sql = require("sqlite");
 ,spee={};
 
 
-const sWlc = {}
 const premium = ['396958215377780747', '', '', '']
 client.on('message', message => {
 var prefix = "-";
