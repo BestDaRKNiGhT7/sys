@@ -33,10 +33,10 @@ const sql = require("sqlite");
 
  
 client.on('message',async message => {
-    if(message.content.startsWith(code + "comp")) {
+    if(message.content.startsWith(code + "javas")) {
   if(!message.channel.guild) return message.reply('This Command For Servers Only !');
-    let jscodes = message.guild.channels.find(`name`, "تُصِوِيّتُٱتُ");
-    if(!jscodes) return message.channel.send(":x:لم اجد الروم الخاص بنشر التصويتات");
+    let jscodes = message.guild.channels.find(`name`, "✵-「discord_js");
+    if(!jscodes) return message.channel.send(":x:لم اجد الروم الخاص بنشر الاكواد");
       let filter = m => m.author.id === message.author.id;
       let thisMessage;
       let thisFalse;
@@ -50,6 +50,27 @@ client.on('message',async message => {
       .then(collected => {
         collected.first().delete();
         thisMessage = collected.first().content;
+        let boi;
+        msg.edit(':scroll: **| من فضلك اكتب وصف الكود الأن... :pencil2: **').then(msg => {
+ 
+            message.channel.awaitMessages(filter, {
+              max: 1,
+              time: 90000,
+              errors: ['time']
+            })
+            .then(collected => {
+              collected.first().delete();
+              boi = collected.first().content;
+              let boi2;
+              msg.edit(':man_in_tuxedo: **| من فضلك اكتب من صنع هذا الكود الأن... :pencil2: **').then(msg => {
+ 
+                message.channel.awaitMessages(filter, {
+                  max: 1,
+                  time: 90000,
+                  errors: ['time']
+                })
+                .then(collected => {
+                  collected.first().delete();
                 boi2 = collected.first().content;
         msg.edit(':shield: **| [ هل انت متأكد من نشر الكود؟ | [ نعم ] او [ لا**');
    message.channel.awaitMessages(response => response.content === 'نعم' || 'لا' && filter,{
@@ -67,13 +88,15 @@ client.on('message',async message => {
             if(thisFalse === false) return;
             msg.edit(':dove: **| Done :white_check_mark:, تم بنجاح نشر كودك في روم الاكواد**');
             collected.first().delete();
-            jscodes.send(`@مسابقة
+            jscodes.send(`@everyone | @here
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-**Slayers © :arrow_down:**            
-\*\*js
-${thisMessage}\*\*
+**LastCodes © :arrow_down:**            
+\`\`\`js
+${thisMessage}\`\`\`
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-**تم النشر بواسطة**: ${message.author}`);
+**وصف الكود**: ${boi}
+**تم النشر بواسطة**: ${message.author}
+**المصدر / الشخص الذي صنع الكود**: ${boi2}`);
           }
         }
     );
@@ -85,7 +108,7 @@ ${thisMessage}\*\*
 }
 );
       })}});
-
+  
 const superagent = require("superagent")
 client.on('message' , async (message) => {
  if (message.content.startsWith(prefix + 'yn')) {
