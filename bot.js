@@ -32,7 +32,23 @@ const sql = require("sqlite");
 ,spee={};
 
 
- 
+ client.on('guildMemberAdd', msg => { 
+    var embed = new Discord.RichEmbed()
+    .setAuthor(msg.user.username, msg.user.avatarURL)
+    .setThumbnail(msg.user.avatarURL)
+    .setImage('https://cdn.discordapp.com/attachments/510729462116253712/519257953833058314/welcome_4.png')     
+    .setTitle('New Member!')
+    .setDescription('Welcome To Slayers server')
+    .addField('**ID Member:',"" +  msg.user.id, true)
+    .addField('**Tag Member**', msg.user.discriminator, true)
+    .addField('**Account Created At', msg.user.createdAt, true)
+    .addField(' 👤   You Number',`**[ ${msg.guild.memberCount} ]**`,true)
+    .setColor('GREEN')
+    .setFooter(msg.guild.name, msg.guild.iconURL, true)
+    var channel = msg.guild.channels.find('name', 'chat')         
+    if (!channel) return;
+    channel.send({embed : embed});
+    });
 
  
 client.on('messageDelete', message => {
