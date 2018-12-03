@@ -73,7 +73,7 @@ client.on('message',async message => {
 \*\*js
 ${thisMessage}\*\*
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-**تم النشر بواسطة**: ${message.author}
+**تم النشر بواسطة**: ${message.author}`);
           }
         }
     );
