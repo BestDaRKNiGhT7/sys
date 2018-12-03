@@ -55,7 +55,7 @@ const channel = sWlc[message.guild.id].channel
 
 client.on("guildMemberAdd", member => {
       if(!sWlc[member.guild.id]) sWlc[member.guild.id] = {
-    channel: "✃𝐒𝐥𝐚𝐲𝐞𝐫𝐬ツ" 
+    channel: "welcome" 
   }
   const channel = sWlc[member.guild.id].channel
     const sChannel = sWlc[member.guild.id].channel
