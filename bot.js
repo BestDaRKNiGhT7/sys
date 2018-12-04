@@ -112,7 +112,7 @@ client.on('message', message => {
                 }
                   if(welcome[message.guild.id].by === 'Off') return [message.channel.send(`**The Invited By Is __𝐎𝐍__ !**`), welcome[message.guild.id].by = 'On']
                   if(welcome[message.guild.id].by === 'On') return [message.channel.send(`**The Invited By Is __𝐎𝐅𝐅__ !**`), welcome[message.guild.id].by = 'Off']
-                  fs.writeFile("welcomer.json", JSON.stringify(welcome), (err) => {
+                  fs.writeFile("./welcome.json", JSON.stringify(welcome), (err) => {
                     if (err) console.error(err)
                     .catch(err => {
                       console.error(err);
