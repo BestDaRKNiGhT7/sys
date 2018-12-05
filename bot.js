@@ -168,11 +168,6 @@ client.on('message',async message => {
     message.channel.send("**✅ تم انشاء روم القبول والرفض بنجاح**")
             }
 })
-
-
-
-
-
 const welcome = JSON.parse(fs.readFileSync('./welcomer.json' , 'utf8'));
  
 client.on('message', message => {
