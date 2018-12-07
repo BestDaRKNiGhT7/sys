@@ -38,11 +38,11 @@ client.on("message", (message) => {
 
   if (message.content.toLowerCase().startsWith(prefix + `ticket`)) {
     const embed = new Discord.RichEmbed()
-    .setTitle(`:mailbox_with_mail: Vulnix Help`)
+    .setTitle(`:mailbox_with_mail: Slayers`)
     .setColor(0xCF40FA)
-    .setDescription(`Hello! I'm Vulnix, the Discord bot for super cool support ticket stuff and more! Here are my commands:`)
+    .setDescription(`Hello! I'm the Slayer, the Discord bot for super cool support ticket stuff and more! Here are my commands:`)
     .addField(`Tickets`, `[${prefix}new]() > Opens up a new ticket and tags the Support Team\n[${prefix}close]() > Closes a ticket that has been resolved or been opened by accident`)
-    .addField(`Other`, `[${prefix}help]() > Shows you this help menu your reading\n[${prefix}ping]() > Pings the bot to see how long it takes to react\n[${prefix}about]() > Tells you all about Vulnix`)
+    .addField(`Other`, `[${prefix}help]() > Shows you this help menu your reading\n[${prefix}ping]() > Pings the bot to see how long it takes to react\n[${prefix}about]() > Tells you all about Slayer`)
     message.channel.send({ embed: embed });
   }
 
@@ -71,7 +71,7 @@ if (message.content.toLowerCase().startsWith(prefix + `new`)) {
             SEND_MESSAGES: true,
             READ_MESSAGES: true
         });
-        message.channel.send(`:white_check_mark: مرحباًً بك #${c.name}.`);
+        message.channel.send(`:white_check_mark: تم انشاء التيكيت #${c.name}.`);
         const embed = new Discord.RichEmbed()
         .setColor(0xCF40FA)
         .addField(`Hey ${message.author.username}!`, `من فضلك اكتب سبب انشاء التيكيت.`)
