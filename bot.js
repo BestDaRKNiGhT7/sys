@@ -69,14 +69,14 @@ client.on('guildMemberAdd', member => {
  
     });
 client.on("message", message => {
-            if(message.content.startsWith("*تقديم")) {
+            if(message.content.startsWith("تقديم")) {
         if(!message.channel.guild) return;
                 if(message.author.bot) return;
         let channel = message.guild.channels.find("name", "التقديمات")
             if(!channel) return message.reply("**لانشاء روم التقديمات !!setsubmissions من فضلك اكتب الامر**")
             if(channel) {
             message.channel.send( message.member + ', **:timer:**').then( (m) =>{
-              m.edit( message.member + ', **اسمك الحقيقى بالكامل ✍**' )
+              m.edit( message.member + ', **اسمك الحقيقى بالكامل + اسمك في الديسكورد بالتاق✍**' )
               m.channel.awaitMessages( m1 => m1.author == message.author,{ maxMatches: 1, time: 60*1000 } ).then ( (m1) => {
                   m1 = m1.first();
                   var name = m1.content;
@@ -3671,7 +3671,7 @@ client.on("guildMemberAdd", member => {
   }
   const channel = sWlc[member.guild.id].channel
     const sChannel = sWlc[member.guild.id].channel
-    let welcomer = member.guild.channels.find('name', sChannel);
+    let welcomer = member.guild.channels.find('name', '✃slayersツ');
     let memberavatar = member.user.avatarURL
       if (!welcomer) return;
       if(welcomer) {
