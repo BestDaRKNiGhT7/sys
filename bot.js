@@ -34,14 +34,14 @@ const sql = require("sqlite");
 
 
 client.on('guildMemberAdd', member => {
-    let channel = member.guild.channels.find('name', '♛『five』♛');
+    let channel = member.guild.channels.find('name', '✃slayersツ');
     let memberavatar = member.user.avatarURL
       if (!channel) return;
     let embed = new Discord.RichEmbed()
         .setColor('PURPLE')
         .setThumbnail(memberavatar)
         .addField('🎽 | name :  ',`${member}`)
-        .addField('📢 | اطلق من دخل' , `Welcome to the server, ${member}`)
+        .addField('📢 | اطلق من دخل' , `Welcome to Slayers server, ${member}`)
         .addField('🆔 | user :', "**[" + `${member.id}` + "]**" )
                 .addField('➡| انت العضو رقم',`${member.guild.memberCount}`)
                
