@@ -226,7 +226,7 @@ client.on('guildMemberAdd', member => {
                     if(!welcome[member.guild.id]) welcome[member.guild.id] = {
                   by: 'Off'
                 }
-    if(welcome[member.guild.id].by === 'Off') return;
+    if(welcome[member.guild.id].by === 'on') return;
   member.guild.fetchInvites().then(guildInvites => {
     const ei = invites[member.guild.id];
     invites[member.guild.id] = guildInvites;
