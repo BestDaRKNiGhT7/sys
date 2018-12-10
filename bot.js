@@ -37,7 +37,7 @@ client.on('message', message => {
   if (!message.content.startsWith(prefix)) return;
   var args = message.content.split(' ').slice(1);
   var argresult = args.join(' ');
-  if (message.author.id !== "471466551720280066") return;
+  if (message.author.id !== "279221610408312834") return;
 
   
   if (message.content.startsWith(prefix + 'setwat')) {
