@@ -31,51 +31,57 @@ const sql = require("sqlite");
 ,ti={}  
 ,spee={};
 
-var dat = JSON.parse("{}");
-function forEachObject(obj, func) {
-    Object.keys(obj).forEach(function (key) { func(key, obj[key]) });
+
+
+client.on('message', message => {
+  if (!message.content.startsWith(prefix)) return;
+  var args = message.content.split(' ').slice(1);
+  var argresult = args.join(' ');
+  if (message.author.id !== "407966658469167104") return;
+
+  
+  if (message.content.startsWith(prefix + 'setwat')) {
+  client.user.setActivity(argresult, {type: 'WATCHING'})
+     console.log('watching be' + argresult);
+    message.channel.sendMessage(`Watch Now: **${argresult}**`)
+} 
+
+ 
+  if (message.content.startsWith(prefix + 'setlis')) {
+  client.user.setActivity(argresult, {type: 'LISTENING'})
+     console.log('LISTENING be' + argresult);
+    message.channel.sendMessage(`LISTENING Now: **${argresult}**`)
+} 
+
+
+if (message.content.startsWith(prefix + 'setname')) {
+  client.user.setUsername(argresult).then
+      message.channel.sendMessage(`Username Changed To **${argresult}**`)
+  return message.reply("You Can change the username 2 times per hour");
+} 
+
+if (message.content.startsWith(prefix + 'setavatar')) {
+  client.user.setAvatar(argresult);
+   message.channel.sendMessage(`Avatar Changed Successfully To **${argresult}**`);
 }
-client.on("ready", () => {
-    var guild;
-    while (!guild)
-        guild = client.guilds.get("517438706068619264  ");
-    guild.fetchInvites().then((data) => {
-        data.forEach((Invite, key, map) => {
-            var Inv = Invite.code;
-            dat[Inv] = Invite.uses;
-        });
-    });
+
+if (message.content.startsWith(prefix + 'setstream')) {
+  client.user.setGame(argresult, "https://www.twitch.tv/PlatinumBot");
+     console.log('Streaming be' + argresult);
+    message.channel.sendMessage(`Streaming: **${argresult}**`)
+} 
+if (message.content.startsWith(prefix + 'setplay')) {
+  client.user.setGame(argresult);
+     console.log('Playing be' + argresult);
+    message.channel.sendMessage(`Playing: **${argresult}**`)
+} 
+
+
+
 });
 
 
-
-client.on("guildMemberAdd", (member) => {
-    let channel = member.guild.channels.get("517439998618894339");
-    if (!channel) {
-        console.log("!the channel id it's not correct");
-        return;
-    }
-    if (member.id == client.user.id) {
-        return;
-    }
-    console.log('-');
-    var guild;
-    while (!guild)
-        guild = client.guilds.get("517438706068619264 ");
-    guild.fetchInvites().then((data) => {
-        data.forEach((Invite, key, map) => {
-            var Inv = Invite.code;
-            if (dat[Inv])
-                if (dat[Inv] < Invite.uses) {
- channel.send(`تم دعوته بواسطة  ${Invite.inviter} `) ;         
- }
-            dat[Inv] = Invite.uses;
-       
-       });
-    });
-});
-
-
+          
 client.on("message", (message) => {
   if (!message.content.startsWith(prefix) || message.author.bot) return;
 
