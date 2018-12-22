@@ -37,9 +37,9 @@ client.on('message', async (message) => {
     let qest = '';
     let questions = [
       '**مالفرق بين const و var **'
-      '**ماهي فائده client.on(`message`, message => { **',
+      '**ماهي فائده client.on(`message`, message =>  **',
       '**كيف تستخدم await **',
-      '*مالفرق بي*ن message.channel.send(``) و message.reply(``) **'
+      '**مالفرق بين message.channel.send(``) و message.reply(``) **'
  
       ]
     let chaLan = message.channel.awaitMessages(filter, { max: 1, time: 400000, errors: ['time'] })
