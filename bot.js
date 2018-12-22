@@ -28,6 +28,9 @@ const sql = require("sqlite");
 ,ti={}  
 ,spee={};
  
+client.login(process.env.BOT_TOKEN);
+
+
 
 //codes
 
@@ -456,4 +459,3 @@ client.on('message', message => {
   .setURL('https://discordapp.com/oauth2/authorize?client_id=466256531998900246&permissions=8&scope=bot')
  .setDescription(`**اذا كنت تريد الاوامر العامة اظغط الريكشن** 🌏 \n**اذا كنت تريد الاوامر الادارية اظغط الريكشن**🔧 \n**اذا كنت تريد اوامر الالعاب**🎲 \n**اذا كنت تريد اوامر الاغاني **🎶\n              **وشكرا لمستخدمين البوت**`)  
  
-client.login(process.env.BOT_TOKEN);
