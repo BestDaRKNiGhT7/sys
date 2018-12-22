@@ -1,34 +1,39 @@
 //consts
 
 const Discord = require('discord.js');
+var prefix = "$";
+const adminprefix = "!"
 const db = require('quick.db');
 const client = new Discord.Client();   
 const giphy = require('giphy-api')();    
-const googl = require('goo.gl'); 
-const translate = require('google-translate-api'); 
-const fs = require("fs");      
+const googl = require('goo.gl');  
+const translate = require('google-translate-api');   
+const fs = require("fs"); 
+const canvas = require("canvas");
 const getYoutubeID = require('get-youtube-id'); 
 const moment = require("moment");  
 const { Client, Util } = require('discord.js');  
-const UserBlocked = new Set();   
+const UserBlocked = new Set(); 
 const jimp = require('jimp');   
 const math = require('math-expression-evaluator'); 
 const stripIndents = require('common-tags').stripIndents;
 const figlet = require('figlet');
 const google = require('google-it'); 
-const queue = new Map();
+const queue = new Map(); 
 const zalgo = require('zalgolize');   
 const fetchVideoInfo = require('youtube-info');
 const YouTube = require('simple-youtube-api');
 const ytdl = require('ytdl-core');
 const youtube = new YouTube("AIzaSyAdORXg7UZUo7sePv97JyoDqtQVi3Ll0b8");
 const sql = require("sqlite");
- const dateFormat = require('dateformat');
+ const dateFormat = require('dateformat'); 
  const pretty = require('pretty-ms') 
+
 ,ti={}  
 ,spee={};
+
  
-client.login(process.env.BOT_TOKEN);
+
 
 
 
@@ -459,3 +464,6 @@ client.on('message', message => {
   .setURL('https://discordapp.com/oauth2/authorize?client_id=466256531998900246&permissions=8&scope=bot')
  .setDescription(`**اذا كنت تريد الاوامر العامة اظغط الريكشن** 🌏 \n**اذا كنت تريد الاوامر الادارية اظغط الريكشن**🔧 \n**اذا كنت تريد اوامر الالعاب**🎲 \n**اذا كنت تريد اوامر الاغاني **🎶\n              **وشكرا لمستخدمين البوت**`)  
  
+			  
+
+client.login(process.env.BOT_TOKEN);
