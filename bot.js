@@ -36,8 +36,7 @@ client.on('message', async (message) => {
     let br = '';
     let qest = '';
     let questions = [
-      '**مالفرق بين const و var **'
-      '**ماهي فائده client.on(`message`, message =>  **',
+      '**مالفرق بين وكيف نستخدمهم const و var **',
       '**كيف تستخدم await **',
       '**مالفرق بين message.channel.send(``) و message.reply(``) **'
  
