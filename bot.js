@@ -1058,7 +1058,8 @@ message.channel.sendEmbed(embed)
  
  //كود كيك صوتي
        
-client.on("message", message => {
+client.on("message", message => {	
+var prefix = "$" // البريفكس
   let men = message.mentions.users.first();
   if(message.content.startsWith(prefix + "vkick")) {
     try {
