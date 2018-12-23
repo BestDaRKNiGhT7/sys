@@ -9499,4 +9499,4 @@ client.on('message', msg => {
     else if (command === 'invite') return msg.channel.send(process.env.INVITE);
 });
 
-client.login(process.env.TOKEN);
+client.login(process.env.BOT_TOKEN);
