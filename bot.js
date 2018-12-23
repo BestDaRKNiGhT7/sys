@@ -1179,7 +1179,7 @@ if (err) console.error(err)
          
 client.on('message', message => {
  var perfix = '$';
-    if(message.content.startsWith(prefix + "logtoggle")) {
+    if(message.content.startsWith("$" + "logtoggle")) {
 if (message.author.bot) return;
         if(!message.channel.guild) return message.reply('**This Command is Just For Servers!**');
         if(!message.member.hasPermission('MANAGE_GUILD')) return message.channel.send('**Sorry But You Dont Have Permission** `MANAGE_GUILD`' );
