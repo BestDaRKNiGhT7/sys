@@ -23,7 +23,6 @@ const youtube = new YouTube("AIzaSyAdORXg7UZUo7sePv97JyoDqtQVi3Ll0b8");
 const sql = require("sqlite");
  const dateFormat = require('dateformat');
  const pretty = require('pretty-ms');
-const prefix = '$'
 ,ti={}  
 ,spee={};
  
@@ -125,7 +124,7 @@ hours = 12;
 client.on('message', message => {
 	var prefix = "$";
 if(!message.channel.guild) return;
-if(message.content.startsWith(prefix + 'move')) {
+if(message.content.startsWith('$' + 'move')) {
  if (message.member.hasPermission("MOVE_MEMBERS")) {
  if (message.mentions.users.size === 0) {
  return message.channel.send("``لاستخدام الأمر اكتب هذه الأمر : " +prefix+ "move [USER]``")
