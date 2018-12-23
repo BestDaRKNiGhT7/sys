@@ -170,8 +170,7 @@ client.on('message', async (message) => {
     let br = '';
     let qest = '';
     let questions = [
-      '**مالفرق بين const و var **'
-      '**ماهي فائده //client.on(`message`, message => {// **',
+      '**مالفرق بين const و var **',
       '**كيف تستخدم await **',
       '*مالفرق بي*ن message.channel.send(``) و message.reply(``) **'
  
@@ -1889,7 +1888,7 @@ client.on('voiceStateUpdate', (voiceOld, voiceNew) => {
 
 client.on("message", message => {
 	var prefix = "$";
- if (message.content === "$help.)(") {
+ if (message.content === "$help)(") {
   const embed = new Discord.RichEmbed() 
       .setColor("#000000") 
       .setDescription(`
@@ -1921,7 +1920,7 @@ ${prefix}help-m ⇏    **  | لعرض الاوامر الاغاني**
   
 
 client.on('message', message => {
-    if (message.content === "-help-p") {
+    if (message.content === "$help-p") {
     let embed = new Discord.RichEmbed()
   .setAuthor(message.author.username)
   .setColor("#000000")
@@ -1934,7 +1933,7 @@ client.on('message', message => {
   });
   
 client.on('message', message => {
-    if (message.content === "-help-a") {
+    if (message.content === "$help-a") {
     let embed = new Discord.RichEmbed()
   .setAuthor(message.author.username)
   .setColor("#000000")
@@ -1947,7 +1946,7 @@ client.on('message', message => {
   });
   
   client.on('message', message => {
-    if (message.content === "-help-g") {
+    if (message.content === "$help-g") {
     let embed = new Discord.RichEmbed()
   .setAuthor(message.author.username)
   .setColor("#000000")
@@ -1961,7 +1960,7 @@ client.on('message', message => {
   
   
   client.on('message', message => {
-    if (message.content === "-help-m") {
+    if (message.content === "$help-m") {
     let embed = new Discord.RichEmbed()
   .setAuthor(message.author.username)
   .setColor("#000000")
@@ -1975,7 +1974,7 @@ client.on('message', message => {
   
    
      client.on("message", message => {
-      if (message.content === "-help-a") {
+      if (message.content === "$help-a") {
        const embed = new Discord.RichEmbed() 
            .setThumbnail(message.author.avatarURL)
            .setColor("#FF0000")
@@ -1983,7 +1982,7 @@ client.on('message', message => {
 **============ **
   ** $move @user |  لسحب الشخص الى رومك** :confused: 
 
-  ** $bc | رسالة جماعية الى كل اعضاء السيرفر** :mega:
+  ** $bc | برودكاست للسيرفر** :mega:
 
   ** $role @user <rank> | لأعطاء رتبة لعضو معين**:large_orange_diamond: 
 
@@ -1993,40 +1992,19 @@ client.on('message', message => {
 
   ** $role humans <rank> | لأعطاء رتبة للاشخاص فقط **:man: , :woman: 
 
-  **-role bots <rank> | لأعطاء رتبة لجميع البوتات**:robot: 
+  **$role bots <rank> | لأعطاء رتبة لجميع البوتات**:robot: 
 
-  ** -schannel | اضهار الشات المخفية**:blush: 
+  ** $clr <numbr> | مسح الشات بعدد**:information_source: 
 
-  ** -hchannel | اخفاء الشات**:arrow_heading_down: 
+  ** $clear | مسح الشات ** :recycle: 
 
-  ** -clr <numbr> | مسح الشات بعدد**:information_source: 
+  ** $mute @user <reason> | اعطاء العضو ميوت لازم رتبة <Muted>**:mute:
 
-  ** -clear | مسح الشات ** :recycle: 
-
-  ** -mute @user <reason> | اعطاء العضو ميوت لازم رتبة <Muted>**:mute:
-
-  ** -unmute @user | لفك الميوت عن الشخص ** :loud_sound:
+  ** $unmute @user | لفك الميوت عن الشخص ** :loud_sound:
 
   ** -kick @user <reason> | طرد الشخص من السيرفر**  :outbox_tray:
 
   ** -ban @user <reason> | حضر الشخص من السيرفر** :no_entry:
-
-  ** -mutechannel | تقفيل الشات**:no_entry:
-
-  ** -unmutechannel | فتح الشات**:on:   
-
-  ** -dc | مسح كل الرومات**
-
-  ** -dr | <مسح كل الرانكات <لازم تكون رانك البوت فوق كل الرانكات**
-
-  ** -ct <name> | انشاء شات**:rolling_eyes:
-
-  ** -cv <name> | انشاء رووم فويس**:crown:
-
-  ** -delet <name> | مسح الشات او الرووم فويس**
-
-  ** -ccolors <number> | ينشا لك الوان مع كم الوان تبي**
-
   -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 `)
      message.author.sendEmbed(embed)
@@ -2034,49 +2012,6 @@ client.on('message', message => {
      }
      });
   
-  
-
-  
-  
-  
-  
-   client.on("message", message => {
-    if (message.content === "-help-g") {
-     const embed = new Discord.RichEmbed() 
-         .setThumbnail(message.author.avatarURL)
-         .setColor("#FFFF00")
-         .setDescription(`**  :video_game: الألعاب :video_game:**
-  ** -rps | حجر ورقة مقص ** :video_game:
-
-  ** -speed | اسرع كتابن ** :video_game:
-
-  ** -quas | اسئلة عامة ** :video_game:
-
-  ** -نكت | نكت ** :video_game:
-
-  ** -لعبة فكك | فكك ** :video_game:
-
-  ** -لعبة عواصم | عواصم** :video_game:
-
-  ** -لعبة كت تويت | كت تويت ** :video_game:
-
-  ** -roll | قرعة راندوم** :video_game:
-
-  ** -لو خيروك بطريقة حلوة | لوخيروك
-
-  ** -لعبة مريم | مريم** :video_game: 
-  
-  ** -فوائد نصائح | هلتعلم ** :video_game: 
-  
-  ** -يعطيك عقابات قاسية |عقاب** :video_game: 
-   `)
-   message.author.sendEmbed(embed)
-   
-   }
-   });
-
-
-
    client.on("message", message => {
       if (message.content === "-help-m") {
        const embed = new Discord.RichEmbed() 
@@ -2112,61 +2047,12 @@ client.on('message', message => {
            .setDescription(`**   :earth_africa: الأوامر العامه :earth_africa: **
 **============ **
 
-  ** -allbots | لعرض جميع البوتات الي بالسيرفر** :robot: 
 
-  ** -server |يعرض لك معلومات عن السيرفر**:fire: 
+  ** $invites | يعرض لك  عدد انفايتاتك بالسيرفر ** :microscope: 
 
-  ** -bot | يعرض لك كل معلومات البوت**:computer: 
-  
-  ** -skin <name> | يعرض لك سكنك بماين كرافت**:blush:
+  ** $cal | اله حاسبة**:slot_machine:  
 
-  ** -count | يعرض لك عدد الاشخاص بالسيرفر بدون بوتات** :information_source:
-
-  ** -invites | يعرض لك  عدد انفايتاتك بالسيرفر ** :microscope: 
-
-  ** -invite-codes | يعرض لك روابط الانفايتات حكك في السيرفر **:spy: 
-
-  ** -cal | اله حاسبة**:slot_machine: 
-
-  ** -trans <language> <any thing> | يترجم لك الي تبيه من اي لغة**:writing_hand: 
-
-  ** -short | يختصر لك رابط كبير الى رابط صغير**:mortar_board: 
-
-  ** -tag | يكتب لك الكلمة بشكل جميل وكبير**:sunglasses: 
-
-  ** -google | للبحث في قوقل عن طريق الدسكورد**:desktop: 
-
-  ** -perms | يعرض لك برمشناتك بالسيرفر**:pushpin: 
-
-  ** -za5 | يزخرف لك كلمة او جملة**:hearts: 
-
-  ** -rooms | يعرض لك كل الرومات الي بالسيرفر مع عددها**:rocket: 
-
-  ** -roles | يعرض لك كل الرانكات بالسيرفر بشكل جميل**
-
-  ** -emojilist | يعرض لك كل الايموجيات الي بالسيرفر**:cry: :smile: :joy: 
-
-  ** -say | يكرر الكلام الي تكتبو**:sparkles: 
-
-  ** -image | صورة السيرفر**:bust_in_silhouette: 
-
-  ** -members | يعرض لك عدد كل حالات الاشخاص وعدد البوتات وعدد الاشخاص**:selfie: 
-
-  ** -profile | ليعرض البرفايل حقك** 
-
-  ** -bans | عدد الاشخاص المبندة **:no_entry: 
-
-  ** -avatar | صورتك او صورة الي تمنشنو**:bust_in_silhouette:
-
-  ** -embed | يكرر الي تقولو بشكل حلو**:small_blue_diamond: 
-
-  ** -emoji <any things> | لتحويل اي كلمه تقولها الي ايموجي**:small_orange_diamond: 
-
-  ** -inv | لدعوة البوت الى سيرفرك**:black_circle: 
-
-  ** -support | سيرفر الدعم**:wrench:  :envelope_with_arrow: 
-  
-  ** -contact | ارسال اقتراح او لمراسلة صاحب البوت**
+  ** $tag | يكتب لك الكلمة بشكل جميل وكبير**:sunglasses: 
   
 **  ======:blossom:نــتــمــنــآ لــكــم آســتــمـــتــآع :blossom:======  **`)
      message.author.sendEmbed(embed)
@@ -2180,8 +2066,8 @@ client.on('message', message => {
       if (message.content === "-help-a") {
        const embed = new Discord.RichEmbed() 
            .setColor("#FF00FF")
-           .setFooter('By *LEGEND_YT#4537  ')
-           .setDescription(`**__أتمنى يعجبكم البوت يا أغلى ناس:revolving_hearts: __**`)
+           .setFooter('By <@279221610408312834>  ')
+           .setDescription(`**أتمنى يعجبكم البوت يا أغلى ناس**`)
      message.author.sendEmbed(embed)
      
      }
@@ -2192,8 +2078,8 @@ client.on('message', message => {
       if (message.content === "-help-g") {
        const embed = new Discord.RichEmbed() 
            .setColor("#FF00FF")
-           .setFooter('By *LEGEND_YT#4537  ')
-           .setDescription(`**__أتمنى يعجبكم البوت يا أغلى ناس:revolving_hearts: __**`)
+           .setFooter('By <@279221610408312834>  ')
+           .setDescription(`**أتمنى يعجبكم البوت يا أغلى ناس**`)
      message.author.sendEmbed(embed)
      
      }
@@ -2204,8 +2090,8 @@ client.on('message', message => {
       if (message.content === "-help-m") {
        const embed = new Discord.RichEmbed() 
            .setColor("#FF00FF")
-           .setFooter('By *LEGEND_YT#4537  ')
-           .setDescription(`**__أتمنى يعجبكم البوت يا أغلى ناس:revolving_hearts: __**`)
+           .setFooter('By <@279221610408312834>  ')
+           .setDescription(`**أتمنى يعجبكم البوت يا أغلى ناس**`)
      message.author.sendEmbed(embed)
      
      }
@@ -2216,8 +2102,8 @@ client.on('message', message => {
       if (message.content === "-help-p") {
        const embed = new Discord.RichEmbed() 
            .setColor("#FF00FF")
-           .setFooter('By *LEGEND_YT#4537  ')
-           .setDescription(`**__أتمنى يعجبكم البوت يا أغلى ناس:revolving_hearts: __**`)
+           .setFooter('By <@279221610408312834>  ')
+           .setDescription(`**أتمنى يعجبكم البوت يا أغلى ناس**`)
      message.author.sendEmbed(embed)
      
      }
@@ -2226,7 +2112,7 @@ client.on('message', message => {
     client.on('message', async msg => {
     var prefix = "-";
     var user = msg.author;
-        if (msg.content === (prefix +'help')) {
+        if (msg.content === (prefix +'helpppp')) {
         if(!msg.channel.guild) return msg.channel.send('**هذا الأمر فقط للسيرفرات**').then(m => m.delete(5000));
         msg.channel.send({embed: new Discord.RichEmbed()
  .setAuthor(client.user.username , client.user.avatarURL)
