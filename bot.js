@@ -1154,7 +1154,7 @@ if(message.content.startsWith(prefix + 'ri')) { // الامر
 client.on('message', message => {
     let room = message.content.split(" ").slice(1);
     let findroom = message.guild.channels.find('name', `${room}`)
-    var perfix = "$";
+    var perfix = '$';
     if(message.content.startsWith("$" + "setlog")) {
 if (message.author.bot) return;
         if(!message.channel.guild) return message.reply('**This Command is Just For Servers!**');
@@ -1178,7 +1178,7 @@ if (err) console.error(err)
     }})
          
 client.on('message', message => {
- var perfix = "$";
+ var perfix = '$';
     if(message.content.startsWith(prefix + "logtoggle")) {
 if (message.author.bot) return;
         if(!message.channel.guild) return message.reply('**This Command is Just For Servers!**');
