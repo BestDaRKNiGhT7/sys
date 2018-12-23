@@ -171,7 +171,7 @@ client.on('message', async (message) => {
     let qest = '';
     let questions = [
       '**مالفرق بين const و var **'
-      '**ماهي فائده client.on(`message`, message => { **',
+      '**ماهي فائده //client.on(`message`, message => {// **',
       '**كيف تستخدم await **',
       '*مالفرق بي*ن message.channel.send(``) و message.reply(``) **'
  
