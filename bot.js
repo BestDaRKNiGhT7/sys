@@ -1178,7 +1178,7 @@ if (err) console.error(err)
     }})
          
 client.on('message', message => {
- 
+ var perfix = "$";
     if(message.content.startsWith(prefix + "logtoggle")) {
 if (message.author.bot) return;
         if(!message.channel.guild) return message.reply('**This Command is Just For Servers!**');
