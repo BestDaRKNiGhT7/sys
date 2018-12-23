@@ -1146,13 +1146,6 @@ if(message.content.startsWith(prefix + 'ri')) { // الامر
 
        });
  
-//تثبيت البوت في روم  
- 
-
-client.on('ready',async () => {
-  client.channels.find(ch => ch.id === "525972321035354126" && ch.type === 'voice').join();
-});
- 
  //لوق
  //يحتاج روم log.json
  
