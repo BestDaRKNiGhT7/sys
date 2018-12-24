@@ -8882,6 +8882,7 @@ message.channel.sendMessage({embed: {
 
 client.on('message', async msg => { 
 	if (msg.author.bot) return undefined;
+	var perfix = "$";
     if (!msg.content.startsWith(prefix)) return undefined;
     
     const args = msg.content.split(' ');
