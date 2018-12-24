@@ -17,13 +17,6 @@ const adminprefix = "admin-"
 
 var ffbinaries = require('ffbinaries');
 
-var ffbinaries = require('ffbinaries');
-var dest = __dirname + '/binaries';
-
-ffbinaries.downloadBinaries(['ffmpeg', 'ffprobe'], {platform: 'linux-64', quiet: true, destination: dest}, function () {
-  console.log('Downloaded ffplay and ffprobe binaries for linux-64 to ' + dest + '.');
-});
-
 
 
 client.on('ready', function(){
