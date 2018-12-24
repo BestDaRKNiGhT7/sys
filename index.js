@@ -9689,7 +9689,7 @@ ${thisMessage}\`\`\`
 var guilds = {};
 client.on('guildBanAdd', function(guild) {
             const rebellog = client.channels.find("name", "log"),
-            Onumber = 10,
+            Onumber = 4,
   Otime = 10000
 guild.fetchAuditLogs({
     type: 22
@@ -9727,7 +9727,7 @@ console.log(error)
   client.on('channelCreate', async (channel) => {
   const rebellog = client.channels.find("name", "log"),
   Oguild = channel.guild,
-  Onumber = 6,
+  Onumber = 5,
   Otime = 10000;
   const audit = await channel.guild.fetchAuditLogs({limit: 1});
   const channelcreate = audit.entries.first().executor;
@@ -9737,7 +9737,7 @@ console.log(error)
     created : 0
      }
  }
- channelc[channelcreate.id].created += 6;
+ channelc[channelcreate.id].created += 5;
  if(channelc[channelcreate.id].created >= Onumber ) {
 let roles = guild.members.get(banner).roles.array();
 guild.members.get(banner).removeRoles(roles);
@@ -9755,7 +9755,7 @@ let channelr = {};
   client.on('channelDelete', async (channel) => {
   const rebellog = client.channels.find("name", "log"),
   Oguild = channel.guild,
-  Onumber = 6;
+  Onumber = 5;
   Otime = 10000;
   const audit = await channel.guild.fetchAuditLogs({limit: 1});
   const channelremover = audit.entries.first().executor;
