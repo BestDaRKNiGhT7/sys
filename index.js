@@ -18,7 +18,24 @@ const adminprefix = "admin-"
 
 
 
-
+const processFile = async fileName => {
+    try {
+      const code = await readFile(fileName);
+      const posixName = posixPath(fileName);
+      const result = transform(code, {
+        filename: fileName,
+        presets: babelrc.presets,
+        plugins: ['react-intl'],
+      }).metadata['react-intl'];
+      if (result.messages && result.messages.length) {
+        fileToMessages[posixName] = result.messages.sort(compareMessages);
+      } else {
+        delete fileToMessages[posixName];
+      }
+    } catch (err) {
+      console.error(`extractMessages: In ${fileName}:\n`, err.codeFrame || err);
+    }
+  };
 
 
 
