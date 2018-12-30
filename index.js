@@ -8892,8 +8892,6 @@ message.channel.sendMessage({embed: {
 
  var servers = [];
 
-var queue = [];
-
 var guilds = [];
 
 var queueNames = [];
