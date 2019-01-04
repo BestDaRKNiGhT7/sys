@@ -8890,7 +8890,6 @@ message.channel.sendMessage({embed: {
 
 
 
- let queue = {};
 
 const commands = {
 	'play': (msg) => {
