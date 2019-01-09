@@ -1,6 +1,6 @@
 // Discord.js bot
 const Discord = require('discord.js');
-const { Client, Util } = require('discord.js');llpl
+const { Client, Util } = require('discord.js');
 
 
 
